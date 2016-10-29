@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="FactoryDPAT_TP029483">
+  <ClassDiagramComponents>
+    <Class name="Product" package="factorydpat_tp029483" visibility="public" isAbstract="true" xPosition="424.0" yPosition="37.0">
+      <Fields>
+        <Field name="productName" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="companyName" type="String" visibility="private"/>
+        <Field name="category" type="String" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+        <Field name="season" type="String" visibility="private"/>
+        <Field name="seller" type="String" visibility="private"/>
+        <Field name="code" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getProductName" returnType="String" visibility="public"/>
+        <Method name="setProductName" returnType="void" visibility="public">
+          <Argument type="String" name="newProductName"/>
+        </Method>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="double" name="newPrice"/>
+        </Method>
+        <Method name="getCompanyName" returnType="String" visibility="public"/>
+        <Method name="setCompanyName" returnType="void" visibility="public">
+          <Argument type="String" name="newCompanyName"/>
+        </Method>
+        <Method name="getCategory" returnType="String" visibility="public"/>
+        <Method name="setCategory" returnType="void" visibility="public">
+          <Argument type="String" name="newCategory"/>
+        </Method>
+        <Method name="getMaterial" returnType="String" visibility="public"/>
+        <Method name="setMaterial" returnType="void" visibility="public">
+          <Argument type="String" name="newMaterial"/>
+        </Method>
+        <Method name="getSeason" returnType="String" visibility="public"/>
+        <Method name="setSeason" returnType="void" visibility="public">
+          <Argument type="String" name="newSeason"/>
+        </Method>
+        <Method name="getSeller" returnType="String" visibility="public"/>
+        <Method name="setSeller" returnType="void" visibility="public">
+          <Argument type="String" name="newSeller"/>
+        </Method>
+        <Method name="getCode" returnType="double" visibility="public"/>
+        <Method name="setCode" returnType="void" visibility="public">
+          <Argument type="double" name="newCode"/>
+        </Method>
+        <Method name="resultMessage" returnType="void" visibility="public"/>
+        <Method name="ProductDetails" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProductFactory" package="factorydpat_tp029483" visibility="public" xPosition="10.0" yPosition="257.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="makeProduct" returnType="Product" visibility="public">
+          <Argument type="String" name="newProductType"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductTesting" package="factorydpat_tp029483" visibility="public" xPosition="1013.0" yPosition="71.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="doProducStuff" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Product" name="theProduct"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ShirtProduct" package="factorydpat_tp029483" visibility="public" xPosition="1013.0" yPosition="202.0">
+      <Fields>
+        <Field name="reader" type="BufferedReader" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ShortProduct" package="factorydpat_tp029483" visibility="public" xPosition="1013.0" yPosition="342.0">
+      <Fields>
+        <Field name="reader" type="BufferedReader" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SneakerProduct" package="factorydpat_tp029483" visibility="public" xPosition="1013.0" yPosition="476.0">
+      <Fields>
+        <Field name="reader" type="BufferedReader" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="factorydpat_tp029483.ShirtProduct" target="factorydpat_tp029483.Product"/>
+    <IsRelation name="is" source="factorydpat_tp029483.SneakerProduct" target="factorydpat_tp029483.Product"/>
+    <UseRelation source="factorydpat_tp029483.ProductTesting" target="factorydpat_tp029483.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="factorydpat_tp029483.ShortProduct" target="factorydpat_tp029483.Product"/>
+    <UseRelation source="factorydpat_tp029483.ProductFactory" target="factorydpat_tp029483.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
